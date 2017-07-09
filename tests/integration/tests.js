@@ -44,7 +44,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('12')
   });
 
-  it('should work when negative, large numbers or decimals are pressed', function(){
+  it('should work when negative and large numbers are pressed', function(){
     running_total = element(by.css('#running_total'))
     element(by.css('#number4')).click();
     element(by.css('#operator_subtract')).click();
@@ -58,5 +58,17 @@ describe('calculator functionality', function() {
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('-600')
   });
+
+  it('should work when decimals are pressed', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number2')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('2.5')
+  });
+
 
 });
