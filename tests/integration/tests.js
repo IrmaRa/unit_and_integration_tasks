@@ -22,7 +22,16 @@ describe('calculator functionality', function() {
     element(by.css('#number5')).click();
     element(by.css('#number8')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('258')
-  })
+  });  
+
+  it('should update display after arithmetical operations', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number8')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_divide')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('4')
+  });
 
 
 });
