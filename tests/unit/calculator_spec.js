@@ -41,4 +41,10 @@ describe('calculator', function () {
     assert.equal(3, calculator.runningTotal);
   }); 
 
+  it('should be able to clear', function() {
+    calculator.add(5)
+    calculator.clearClick()
+    assert.equal(0, calculator.runningTotal);
+  });
+
 });
