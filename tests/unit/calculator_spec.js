@@ -31,4 +31,14 @@ describe('calculator', function () {
     assert.equal(0, calculator.runningTotal);
   });
 
+  it('should be able to handle multiple operations', function() {
+    calculator.numberClick(1)
+    calculator.operatorClick('+')
+    calculator.numberClick(5)
+    calculator.operatorClick('/')
+    calculator.numberClick(2)
+    calculator.operatorClick('=')
+    assert.equal(3, calculator.runningTotal);
+  }); 
+
 });
