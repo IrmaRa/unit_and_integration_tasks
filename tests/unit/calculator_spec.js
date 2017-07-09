@@ -16,4 +16,9 @@ describe('calculator', function () {
     assert.equal(5, calculator.runningTotal);
   });
 
+  it('should be able to subtract', function() {
+    calculator.subtract(4)
+    assert.equal(-4, calculator.runningTotal);
+  });
+
 });
