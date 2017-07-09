@@ -19,6 +19,11 @@ describe('calculator', function () {
   it('should be able to subtract', function() {
     calculator.subtract(4)
     assert.equal(-4, calculator.runningTotal);
+  }); 
+
+  it('should be able to multiply', function() {
+    calculator.multiply(3)
+    assert.equal(0, calculator.runningTotal);
   });
 
 });
