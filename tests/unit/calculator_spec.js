@@ -26,4 +26,9 @@ describe('calculator', function () {
     assert.equal(0, calculator.runningTotal);
   });
 
+  it('should be able to divide', function() {
+    calculator.divide(2)
+    assert.equal(0, calculator.runningTotal);
+  });
+
 });
